@@ -1,4 +1,7 @@
 import React from 'react'
+
+import Main from '../Components/Main'
+
 import Greeting from '../Components/Greeting'
 // import Affirmations from '../Components/Affirmations'
 import Weather from '../Components/Weather'
@@ -11,6 +14,7 @@ const Index = () => {
 
     return(
         <div>
+           <Main />
 
            <Greeting /> 
             <Weather />
