@@ -27,11 +27,11 @@ function App() {
             <Home setFirstName={setFirstName} setZipCode={setZipCode} firstName={firstName} zipCode={zipCode}/>
           </Route>
           <Route exact path="/motivators">
-            <Index />
+            <Index firstName={firstName}/>
           </Route>
-          {/* <Route path="*">
+          <Route path="*">
             <FourOFour />
-          </Route> */}
+          </Route>
         </Switch>
       </Router>
     </div>
