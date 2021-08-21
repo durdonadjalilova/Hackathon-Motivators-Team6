@@ -1,17 +1,19 @@
 import React from 'react'
 import Greeting from '../Components/Greeting'
-import Affirmations from '../Components/Affirmations'
-import Weather from '../Components/Weather'
-import Quotes from '../Components/Quotes'
+// import Affirmations from '../Components/Affirmations'
+// import Weather from '../Components/Weather'
+// import Quotes from '../Components/Quotes'
 
 const Index = () => {
 
     return(
         <div>
-            {/* <Greeting /> */}
+
+           <Greeting /> 
             <Weather />
-            {/* <Affirmations /> */}
-            {/* <Quotes /> */}
+        <Affirmations />
+            <Quotes />
+
         </div>
     )
 }
