@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Home from "./Pages/Home";
 import Index from "./Pages/Index";
+import FourOFour from "./Pages/Index";
 import axios from "axios"
 import './App.css';
 
