@@ -22,9 +22,9 @@ function App() {
           <Route exact path="/motivators">
             <Index />
           </Route>
-          <Route path="*">
+          {/* <Route path="*">
             <FourOFour />
-          </Route>
+          </Route> */}
         </Switch>
       </Router>
     </div>
