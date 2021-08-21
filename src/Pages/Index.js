@@ -4,10 +4,14 @@ import Main from '../Components/Main'
 
 import Greeting from '../Components/Greeting'
 // import Affirmations from '../Components/Affirmations'
-// import Weather from '../Components/Weather'
+import Weather from '../Components/Weather/Weather'
 // import Quotes from '../Components/Quotes'
 
+
 const Index = () => {
+
+ 
+    
 
     return(
         <div>
@@ -15,8 +19,8 @@ const Index = () => {
 
            <Greeting /> 
             <Weather />
-        <Affirmations />
-            <Quotes />
+        {/* <Affirmations />
+            <Quotes /> */}
 
         </div>
     )
