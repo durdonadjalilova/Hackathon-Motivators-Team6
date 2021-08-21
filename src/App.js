@@ -7,7 +7,9 @@ import {
 } from "react-router-dom";
 import Home from "./Pages/Home";
 import Index from "./Pages/Index";
+
 import FourOFour from "./Pages/FourOFour";
+
 import axios from "axios"
 import './App.css';
 
@@ -27,9 +29,9 @@ function App() {
           <Route exact path="/motivators">
             <Index />
           </Route>
-          <Route path="*">
+          {/* <Route path="*">
             <FourOFour />
-          </Route>
+          </Route> */}
         </Switch>
       </Router>
     </div>
