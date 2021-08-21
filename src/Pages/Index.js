@@ -8,10 +8,10 @@ const Index = () => {
 
     return(
         <div>
-            <Greeting />
+            {/* <Greeting /> */}
             <Weather />
-            <Affirmations />
-            <Quotes />
+            {/* <Affirmations /> */}
+            {/* <Quotes /> */}
         </div>
     )
 }
