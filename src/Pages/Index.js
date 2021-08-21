@@ -4,13 +4,14 @@ import Main from '../Components/Main'
 
 import Greeting from '../Components/Greeting'
 // import Affirmations from '../Components/Affirmations'
-import Weather from '../Components/Weather'
+import Weather from '../Components/Weather/Weather'
 // import Quotes from '../Components/Quotes'
-import useForecast from '../hooks/useForecast'
+
 
 const Index = () => {
 
-    const { fetchForecastData } = useForecast()
+ 
+    
 
     return(
         <div>
