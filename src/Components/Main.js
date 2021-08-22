@@ -10,14 +10,13 @@ import Weather from "../Components/Weather/Weather";
 const Main = ({firstName, setFirstName, zipCode, setZipCode}) => {
   const [keyword, setKeyword] = useState("")
 
-  const changeKeyword = (newKeyword) => {
-    console.log(newKeyword)
-    setKeyword(newKeyword)
-  }
+  console.log(keyword)
+
+ 
   return (
     <div>
       <Greeting firstName={firstName} setFirstName={setFirstName}  />
-      <Weather zipCode={zipCode} setZipCode={setZipCode} changeKeyword={changeKeyword} />
+      <Weather zipCode={zipCode} setZipCode={setZipCode} setKeyword={setKeyword}  />
 
    <Affirmations />
     </div>

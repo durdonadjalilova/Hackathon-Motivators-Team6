@@ -3,11 +3,10 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import ShowWeather from "./ShowWeather";
 
-
-const Weather = ({ zipCode, setZipCode, changeKeyword }) => {
+const Weather = ({ zipCode, setZipCode, setKeyword }) => {
   const [weatherData, setWeatherData] = useState(null);
 
-  const zipCode = 96795;
+  //   const currenzipCode = 96795;
   const API_KEY = `3be4aceb4cdf59db0f6328334127e108`;
   const API_URL = `http://api.openweathermap.org/data/2.5/weather?zip=${zipCode},us&units=imperial&appid=${API_KEY}`;
 
@@ -16,7 +15,7 @@ const Weather = ({ zipCode, setZipCode, changeKeyword }) => {
       try {
         const res = await axios.get(`${API_URL}`);
 
-        changeKeyword(res.data.weather[0].main);
+        setKeyword(res.data.weather[0].main);
         setWeatherData(res.data);
         console.log(res);
       } catch (error) {
@@ -24,12 +23,9 @@ const Weather = ({ zipCode, setZipCode, changeKeyword }) => {
       }
     };
 
-
     await fetchWeatherData();
 
-    fetchForecastData();
-        setZipCode(localStorage.getItem("zipValue"));
-
+    setZipCode(localStorage.getItem("zipValue"));
   }, []);
   return (
     <div>
