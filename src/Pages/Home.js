@@ -1,4 +1,5 @@
 import DataForm from '../Components/DataForm'
+import "../Pages/Home.css"
 
 function Home({setFirstName, setZipCode, firstName, zipCode}) {
     return (

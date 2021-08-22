@@ -1,0 +1,22 @@
+.Home {
+    padding: 30vh;
+    height: 20vh;
+}
+
+.input-box-containers {
+    margin-top: 20vh;
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    margin: 0 1vw
+}
+
+.button {
+margin-top: 5vh;
+/* width: 7vw; */
+}
+
+
+

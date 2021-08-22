@@ -20,8 +20,9 @@ const DataForm = ({ setFirstName, setZipCode, firstName, zipCode }) => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div >
+      <form className="input" onSubmit={handleSubmit}>
+    <div className="input-box-containers">
         <input
           type="text"
           value={firstName}
@@ -32,11 +33,14 @@ const DataForm = ({ setFirstName, setZipCode, firstName, zipCode }) => {
           type="text"
           value={zipCode}
           maxLength="5"
-          placeholder="only 5 digits"
+          placeholder="zip code"
           pattern="^\u[0-9]{2}$"
           onChange={handleChange}
         />
+        </div>
+        <div className="button">
         <button>Submit</button>
+        </div>
       </form>
     </div>
   );

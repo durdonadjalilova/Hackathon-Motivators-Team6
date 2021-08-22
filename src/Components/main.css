@@ -9,6 +9,7 @@
 
 .main-greeting-container {
   margin-top: 8vh;
+  text-decoration: underline;
 }
 
 .main-weather-container {
@@ -16,15 +17,18 @@
   align-items: center;
   justify-content: center;
   margin-top: 10vh;
-  width: 20vw;
+  border: 2px black solid;
+  width: 25vw;
   height: 60vh;
 }
 
 .main-affirmations-container {
   display: flex;
-  width: 20vw;
-  height: 20vh;
-  font-size: 170%;
+  margin-top: 10vh;
+  width: 40vw;
+  height: 60vh;
+  border: 2px black solid;
+  font-size: 150%;
   color: black;
   font-family: "Cormorant Garamond", serif;
   font-family: "Rampart One", cursive;
