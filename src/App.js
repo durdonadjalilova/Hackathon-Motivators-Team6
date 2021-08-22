@@ -2,15 +2,15 @@ import React, { useState } from "react";
 import {
   BrowserRouter as Router,
   Route,
-  Switch,
-  useHistory,
+  Switch
+  // useHistory,
 } from "react-router-dom";
 import Home from "./Pages/Home";
 import Index from "./Pages/Index";
 
 import FourOFour from "./Pages/FourOFour";
 
-import axios from "axios";
+// import axios from "axios";
 import "./App.css";
 
 function App() {
@@ -30,7 +30,7 @@ function App() {
             />
           </Route>
           <Route exact path="/motivators">
-            <Index firstName={firstName} />
+            <Index firstName={firstName} setFirstName={setFirstName} zipCode={zipCode}/>
           </Route>
           <Route path="*">
             <FourOFour />

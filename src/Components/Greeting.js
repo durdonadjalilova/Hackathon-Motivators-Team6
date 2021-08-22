@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-function Greeting({firstName}) {
+function Greeting({firstName, setFirstName}) {
   const [hour, setHour] = useState(0);
 
   const getTime = () => {
@@ -10,6 +10,7 @@ function Greeting({firstName}) {
 
   useEffect(() => {
     getTime();
+    setFirstName(localStorage.getItem("nameValue"));
   }, []);
 
   return (
