@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 function Greeting({firstName, setFirstName}) {
   const [hour, setHour] = useState(0);
 
+  let activeFirstName = firstName || window.localStorage.getItem("nameValue")
+
   const getTime = () => {
     let time = new Date().getHours();
     setHour(time);
@@ -16,11 +18,11 @@ function Greeting({firstName, setFirstName}) {
   return (
     <h2>
       {hour < 12
-        ? `Good morning ${firstName}!`
+        ? `Good morning ${activeFirstName}!`
         : hour < 18
-        ? `Good afternoon ${firstName}!`
+        ? `Good afternoon ${activeFirstName}!`
         : hour <= 23
-        ? `Good evening ${firstName}!`
+        ? `Good evening ${activeFirstName}!`
         : "hello"}{" "}
     </h2>
   );

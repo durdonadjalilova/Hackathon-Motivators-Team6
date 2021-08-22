@@ -1,22 +1,39 @@
 .Home {
-    padding: 30vh;
-    height: 20vh;
+  padding: 30vh;
+  height: 20vh;
 }
 
 .input-box-containers {
-    margin-top: 20vh;
-    display: flex;
-    justify-content: center;
+  margin-top: 20vh;
+  display: flex;
+  justify-content: center;
 }
 
 input {
-    margin: 0 1vw
+  margin: 0 1vw;
 }
 
 .button {
-margin-top: 5vh;
-/* width: 7vw; */
+  margin-top: 5vh;
+  /* width: 7vw; */
 }
 
+@media only screen and (max-width: 500px) {
+  .Home {
+    margin-top: 10%;
+    text-align: center;
+    padding: 5%;
+  }
 
+  .input-box-containers {
+    margin-top: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
+  input {
+    margin: 5%;
+  }
+}
