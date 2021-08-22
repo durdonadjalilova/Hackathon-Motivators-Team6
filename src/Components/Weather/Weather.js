@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import ShowWeather from "./ShowWeather";
 
-const Weather = ({zipCode}) => {
+const Weather = ({zipCode, setZipCode}) => {
   const [weatherData, setWeatherData] = useState(null);
   // const zipCode = 11229;
   const API_KEY = `3be4aceb4cdf59db0f6328334127e108`;
@@ -20,6 +20,7 @@ const Weather = ({zipCode}) => {
     };
 
     fetchForecastData();
+        setZipCode(localStorage.getItem("zipValue"));
   }, []);
   return (
     <div>
