@@ -1,0 +1,9 @@
+.card {
+    width: 18rem;
+}
+
+.card-img-top {
+    width: 12vw;
+    font-size: 2em;
+    background-color: var(--bg-color--card);
+}
