@@ -3,12 +3,12 @@ import React, { useState, useEffect } from "react";
 const Affirmation = ({ affirmations }) => {
   const [affirmation, setAffirmation] = useState("");
 
-  let weatherType = "rain";
+  let weatherType = "clear";
 
   useEffect(() => {
     const fetchAffirmation = () => {
       let badWeather = [];
-      let allWeather = [];
+      let sunnyWeather = [];
 
       affirmations.map((oneAffirmation) => {
         if (
@@ -83,15 +83,45 @@ const Affirmation = ({ affirmations }) => {
               badWeather[Math.floor(Math.random() * badWeather.length)].phrase
             );
           }
-        } else {
-          allWeather.push(oneAffirmation);
+        } else if (
+            oneAffirmation.phrase.includes("always") ||
+            oneAffirmation.phrase.includes("am") ||
+            oneAffirmation.phrase.includes("anything") ||
+            oneAffirmation.phrase.includes("beauty") ||
+            oneAffirmation.phrase.includes("best") ||
+            oneAffirmation.phrase.includes("calm") ||
+            oneAffirmation.phrase.includes("compassion") ||
+            oneAffirmation.phrase.includes("energy") ||
+            oneAffirmation.phrase.includes("every") ||
+            oneAffirmation.phrase.includes("family") ||
+            oneAffirmation.phrase.includes("goals") ||
+            oneAffirmation.phrase.includes("good") ||
+            oneAffirmation.phrase.includes("gratitude") ||
+            oneAffirmation.phrase.includes("happy") ||
+            oneAffirmation.phrase.includes("heal") ||
+            oneAffirmation.phrase.includes("i'm") ||
+            oneAffirmation.phrase.includes("income") ||
+            oneAffirmation.phrase.includes("learn") ||
+            oneAffirmation.phrase.includes("love") ||
+            oneAffirmation.phrase.includes("myself") ||
+            oneAffirmation.phrase.includes("paradise") ||
+            oneAffirmation.phrase.includes("people") ||
+            oneAffirmation.phrase.includes("perfect") ||
+            oneAffirmation.phrase.includes("positive") ||
+            oneAffirmation.phrase.includes("spirit") ||
+            oneAffirmation.phrase.includes("succeed") ||
+            oneAffirmation.phrase.includes("treat") ||
+            oneAffirmation.phrase.includes("trust") ||
+            oneAffirmation.phrase.includes("valuable") ||
+            oneAffirmation.phrase.includes("well") 
+        ) {
+          sunnyWeather.push(oneAffirmation);
           return setAffirmation(
-            allWeather[Math.floor(Math.random() * allWeather.length)].phrase
+            sunnyWeather[Math.floor(Math.random() * sunnyWeather.length)].phrase
           );
         }
       });
     };
-
     fetchAffirmation();
   });
 
