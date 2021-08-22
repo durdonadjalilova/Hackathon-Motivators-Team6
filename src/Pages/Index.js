@@ -1,29 +1,17 @@
-import React from 'react'
-
-import Main from '../Components/Main'
-
-import Greeting from '../Components/Greeting'
-// import Affirmations from '../Components/Affirmations'
+import React from "react";
 import Weather from '../Components/Weather/Weather'
-// import Quotes from '../Components/Quotes'
+import Greeting from '../Components/Greeting'
 
 
-const Index = () => {
+import Main from "../Components/Main";
 
- 
-    
 
-    return(
-        <div>
-           <Main />
+const Index = ({firstName}) => {
+  return (
+    <div>
+      <Main firstName={firstName} />
+    </div>
+  );
+};
 
-           <Greeting /> 
-            <Weather />
-        {/* <Affirmations />
-            <Quotes /> */}
-
-        </div>
-    )
-}
-
-export default Index
+export default Index;

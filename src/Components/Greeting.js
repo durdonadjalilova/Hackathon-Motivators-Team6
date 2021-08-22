@@ -1,37 +1,7 @@
-// class Greeting extends React.Component {
-//     state = {
-//       hour: null,
-//       username: 'Alyssa'
-//     }
-
-//     componentDidMount() {
-//       this.getHour()
-//     }
-
-//     getHour = () => {
-//      const date = new Date();
-//      const hour = date.getHours()
-//      this.setState({
-//         hour
-//      });
-//     }
-
-//     render(){
-//       const {hour, username} = this.state;
-//       return (
-//         <div className='App'>
-//           <h2>{hour < 12 ? `Good Morning ${username}` : `Good evening ${username}`}</h2>
-//         </div>
-//       );
-//     }
-
-//   }
-
 import { useState, useEffect } from "react";
 
-function Greeting() {
+function Greeting({firstName}) {
   const [hour, setHour] = useState(0);
-  const [name, setName] = useState("");
 
   const getTime = () => {
     let time = new Date().getHours();
@@ -40,16 +10,16 @@ function Greeting() {
 
   useEffect(() => {
     getTime();
-  });
+  }, []);
 
   return (
     <h2>
       {hour < 12
-        ? `Good morning ${name}!`
+        ? `Good morning ${firstName}!`
         : hour < 18
-        ? `Good afternoon ${name}!`
+        ? `Good afternoon ${firstName}!`
         : hour <= 23
-        ? `Good evening ${name}!`
+        ? `Good evening ${firstName}!`
         : "hello"}{" "}
     </h2>
   );
