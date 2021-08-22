@@ -5,10 +5,10 @@ function ShowWeather({weatherData}) {
 let imageLink = `http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`
     return (
         <div>
-            <h5>{weatherData.name} </h5>
-            <h5>{weatherData.weather[0].main}</h5>
+            <h2>{weatherData.name} </h2>
+            <h2>{weatherData.weather[0].main}</h2>
             <img src={imageLink} placeholder="weather-icon"/>
-            <h5>{Math.round(weatherData.main.temp)}{`° F`}</h5>
+            <h2>{Math.round(weatherData.main.temp)}{`° F`}</h2>
 
             
         </div>

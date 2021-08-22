@@ -29,7 +29,7 @@ const Weather = ({ zipCode, setKeyword }) => {
 
   return (
     <div>
-      <h4>Here is your weather for today:</h4>
+     
       {weatherData && <ShowWeather weatherData={weatherData} />}
     </div>
   );
