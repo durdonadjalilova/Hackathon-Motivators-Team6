@@ -10,20 +10,24 @@ const Affirmation = ({ affirmations }) => {
 
 
   useEffect(() => {
-    const fetchAffirmation = async () => {
+    const fetchAffirmation =  () => {
         if (weatherType === "sunny") {
-         await affirmations.map((oneAffirmation) => {
+           affirmations.map((oneAffirmation) => {
             if (!affirmation) {
               if (oneAffirmation.phrase.includes("am")) {
-                 setAffirmation(oneAffirmation.phrase);
-                console.log(affirmation)
+                  return setAffirmation(oneAffirmation.phrase);
+                // console.log(affirmation)
+              } else {
+                 return  setAffirmation(oneAffirmation.phrase)
               }
+            } else {
+                return null
             }
           });
         }
       };
     fetchAffirmation();
-  }, []);
+  }, [affirmation]);
 
   return (
     <div>

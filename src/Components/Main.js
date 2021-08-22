@@ -5,11 +5,11 @@ import Affirmations from "../Components/Affirmations";
 import Weather from "../Components/Weather/Weather";
 
 
-const Main = ({firstName}) => {
+const Main = ({firstName, setFirstName, zipCode}) => {
   return (
     <div>
-      <Greeting firstName={firstName}/>
-      <Weather />
+      <Greeting firstName={firstName} setFirstName={setFirstName} />
+      <Weather zipCode={zipCode} />
    <Affirmations />
     </div>
   );
