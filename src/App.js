@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import {
   BrowserRouter as Router,
   Route,
@@ -10,24 +10,27 @@ import Index from "./Pages/Index";
 
 import FourOFour from "./Pages/FourOFour";
 
-import axios from "axios"
-import './App.css';
+import axios from "axios";
+import "./App.css";
 
 function App() {
   const [firstName, setFirstName] = useState("");
-  const [zipCode, setZipCode] = useState("")
-
-
+  const [zipCode, setZipCode] = useState("");
 
   return (
     <div className="App">
- <Router>
+      <Router>
         <Switch>
           <Route exact path="/">
-            <Home setFirstName={setFirstName} setZipCode={setZipCode} firstName={firstName} zipCode={zipCode}/>
+            <Home
+              setFirstName={setFirstName}
+              setZipCode={setZipCode}
+              firstName={firstName}
+              zipCode={zipCode}
+            />
           </Route>
           <Route exact path="/motivators">
-            <Index firstName={firstName}/>
+            <Index firstName={firstName} />
           </Route>
           <Route path="*">
             <FourOFour />
