@@ -9,6 +9,8 @@ let imageLink = `http://openweathermap.org/img/wn/${weatherData.weather[0].icon}
             <h3>{weatherData.weather[0].main}</h3>
             <img src={imageLink} placeholder="weather-icon"/>
             <h3>{Math.round(weatherData.main.temp)}{`° F`}</h3>
+
+            
         </div>
     )
 }

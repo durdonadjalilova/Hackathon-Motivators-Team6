@@ -7,8 +7,7 @@ import ShowWeather from "./ShowWeather";
 const Weather = ({ zipCode, setZipCode, changeKeyword }) => {
   const [weatherData, setWeatherData] = useState(null);
 
-  const zipCode = 94539;
-
+  const zipCode = 96795;
   const API_KEY = `3be4aceb4cdf59db0f6328334127e108`;
   const API_URL = `http://api.openweathermap.org/data/2.5/weather?zip=${zipCode},us&units=imperial&appid=${API_KEY}`;
 
