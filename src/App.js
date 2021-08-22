@@ -30,7 +30,7 @@ function App() {
             />
           </Route>
           <Route exact path="/motivators">
-            <Index firstName={firstName} setFirstName={setFirstName} zipCode={zipCode}/>
+            <Index firstName={firstName} setFirstName={setFirstName} zipCode={zipCode} setZipCode={setZipCode}/>
           </Route>
           <Route path="*">
             <FourOFour />
