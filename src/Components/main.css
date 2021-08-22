@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Rampart+One&display=swap");
 
-
 .main-parent-container {
   display: flex;
   align-items: center;
@@ -35,4 +34,28 @@
   font-weight: bold;
   justify-content: center;
   align-items: center;
+}
+
+@media only screen and (max-width: 500px) {
+  .main-parent-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main-weather-container {
+    border: none;
+    height: 30vh;
+  }
+
+  .main-affirmations-container {
+    border: none;
+  }
+
+  .main-affirmations-container {
+    margin-top: 2vh;
+    width: 40vw;
+    height: 60vh;
+  }
 }
