@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ShowWeather() {
+function ShowWeather({weatherData}) {
     return (
         <div>
             

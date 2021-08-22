@@ -11,10 +11,12 @@ const Affirmations = () => {
       try {
         let res = await axios.get("https://dulce-affirmations-api.herokuapp.com/affirmation/index");
         setAffirmations(res.data);
+      
       } catch (error) {
         console.log(error);
       }
     };
+  
     useEffect(() => {
       fetchAllAffirmations();
     }, [])
