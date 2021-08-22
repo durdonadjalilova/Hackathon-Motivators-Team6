@@ -8,7 +8,6 @@ const Weather = ({ zipCode, setKeyword }) => {
 
   let currentZip = zipCode || window.localStorage.getItem("zipValue")
 
-  //   const currenzipCode = 96795;
   const API_KEY = `3be4aceb4cdf59db0f6328334127e108`;
   const API_URL = `http://api.openweathermap.org/data/2.5/weather?zip=${currentZip},us&units=imperial&appid=${API_KEY}`;
 

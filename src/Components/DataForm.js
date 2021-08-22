@@ -16,8 +16,6 @@ const DataForm = ({ setFirstName, setZipCode, firstName, zipCode }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // setFirstName(localStorage.getItem("nameValue"));
-    // setZipCode(localStorage.getItem("zipValue"));
     history.push("/motivators");
   };
 
