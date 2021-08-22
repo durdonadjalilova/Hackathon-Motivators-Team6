@@ -1,15 +1,15 @@
-import React from 'react'
-import Main from '../Components/Main'
+
+import React from "react";
+import Main from "../Components/Main";
 
 
-const Index = () => {
+const Index = ({firstName}) => {
+  return (
+    <div>
+      <Main firstName={firstName} />
+    </div>
+  );
+};
 
-    return(
-        <div>
-           <Main />
 
-        </div>
-    )
-}
-
-export default Index
+export default Index;

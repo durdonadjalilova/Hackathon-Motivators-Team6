@@ -1,18 +1,18 @@
-import React from 'react'
-import Greeting from '../Components/Greeting'
-import Affirmations from '../Components/Affirmations'
-import Weather from '../Components/Weather'
+
+import React from "react";
+import Greeting from "../Components/Greeting";
+import Affirmations from "../Components/Affirmations";
+import Weather from "../Components/Weather/Weather";
 
 
-const Main = () => {
+const Main = ({firstName}) => {
+  return (
+    <div>
+      <Greeting firstName={firstName}/>
+      <Weather />
+   <Affirmations />
+    </div>
+  );
+};
 
-    return(
-        <div>
-            <Greeting />
-            <Weather />
-            <Affirmations />
-        </div>
-    )
-}
-
-export default Main
+export default Main;
