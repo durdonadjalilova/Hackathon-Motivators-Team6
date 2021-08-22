@@ -11,12 +11,18 @@ const Main = ({ firstName, setFirstName, zipCode }) => {
   console.log(keyword);
 
   return (
-    <div className="main-parent-container">
-      <div className="main-affirmation-greeting-container">
+    <div>
+      <div className="main-greeting-container">
         <Greeting firstName={firstName} setFirstName={setFirstName} />
-        <Affirmations keyword={keyword} />
       </div>
-      <Weather zipCode={zipCode} setKeyword={setKeyword} />
+      <div className="main-parent-container">
+        <div className="main-weather-container">
+          <Weather zipCode={zipCode} setKeyword={setKeyword} />
+        </div>
+        <div className="main-affirmations-container">
+          <Affirmations keyword={keyword} />
+        </div>
+      </div>
     </div>
   );
 };
