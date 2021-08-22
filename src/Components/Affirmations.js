@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from "react";
 // import { useParams, useHistory, Link } from "react-router-dom";
 import Affirmation from "../Components/Affirmation"
+import { affirmationHelper } from "./AffirmationHelper";
 import axios from "axios";
 
 
-const Affirmations = () => {
-    const [affirmations, setAffirmations] = useState([]);
+const Affirmations = ({keyword}) => {
+    const [affirmations, setAffirmations] = useState({bad: [], sun:[]});
   
     const fetchAllAffirmations = async () => {
       try {
         let res = await axios.get("https://dulce-affirmations-api.herokuapp.com/affirmation/index");
-        setAffirmations(res.data);
+        let sortedAffirmations= affirmationHelper(res.data)
+        setAffirmations(sortedAffirmations);
       
       } catch (error) {
         console.log(error);
@@ -25,19 +27,8 @@ const Affirmations = () => {
 
     return(
         <div>
-            <Affirmation affirmations={affirmations}/>
-            {/* <ul>
-                {affirmations.map(affirmation => {
-                    const {phrase} = affirmation
-                    return (
-                        <li key={phrase}>
-                            <h1>{phrase}</h1>
-                        </li>
-                    )
-                })}
-            </ul> */}
-
-        </div>
+            <Affirmation affirmations={affirmations} keyword={keyword} />
+       </div>
     )
 }
 
